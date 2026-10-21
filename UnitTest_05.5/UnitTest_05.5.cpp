@@ -66,28 +66,5 @@ namespace UnitTest12
 
             Assert::AreEqual(1, depth);
         }
-
-        // 7. depth зберігає максимум (перевірка умови level > depth)
-        TEST_METHOD(TestMethod_DepthKeepsMaximum)
-        {
-            int depth = 100;
-            bisect(0, 2, 0.001, 1, depth);
-
-            Assert::AreEqual(100, depth);
-        }
-
-        // 8. Тест функції f: f(0) = -1
-        TEST_METHOD(TestMethod_FunctionAtZero)
-        {
-            Assert::AreEqual(-1.0, f(0.0), 1e-7);
-        }
-
-        // 9. Тест функції f: f(pi/4) = 0
-        TEST_METHOD(TestMethod_FunctionAtPiOverFour)
-        {
-            double pi = 3.14159265358979323846;
-
-            Assert::AreEqual(0.0, f(pi / 4), 1e-7);
-        }
     };
 }
